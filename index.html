@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi CV</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Barra lateral fija -->
+    <nav class="sidebar">
+
+      <!-- Botones para el cambio de oscuro a claro y viciversa -->
+      <div class="theme-toggle">
+        <button id="dark-mode-btn" class="theme-btn">
+          <i class="fa-solid fa-moon"></i>  <span data-key="btnOscuro">Oscuro</span>
+        </button>
+        <button id="light-mode-btn" class="theme-btn">
+          <i class="fa-solid fa-sun"></i> <span data-key="btnClaro">Claro</span>
+        </button>
+      </div>
+      
+      
+      <div class="profile-picture">
+        <img src="Images/fotoo.jpeg" alt="Foto de perfil">
+      </div>
+      
+      <ul>
+        <li><a href="#sobre-mi"><i class="fas fa-user"></i> <span data-key="sobreMi">Sobre mí</span></a></li>
+        <li><a href="#habilidades"><i class="fas fa-tools"></i> <span data-key="habilidades">Habilidades</span></a></li>
+        <li><a href="#proyectos"><i class="fas fa-project-diagram"></i> <span data-key="proyectos">Proyectos</span></a></li>
+        <li><a href="#educacion"><i class="fas fa-graduation-cap"></i> <span data-key="educacion">Educación</span></a></li>
+        <li><a href="#contacto"><i class="fas fa-envelope"></i> <span data-key="contacto">Contacto</span></a></li>
+      </ul>
+
+      <!-- Botones para el cambio de idioma -->
+      <div class="language-toggle">
+        <button id="spanish-btn" class="language-btn"><span data-key="btnEspanol">Español</span></button>
+        <button id="english-btn" class="language-btn"><span data-key="btnIngles">Inglés</span></button>
+      </div>
+
+    </nav> <!-- Aquí termina lo de la barra fija -->
+
+    <!-- Contenido principal -->
+    <main class="content">
+      
+      <section id="sobre-mi">
+        <h2 data-key="sobreMiTitle">HOLA, SOY JORGE SÁNCHEZ</h2>
+        <p data-key="sobreMiText">Soy un apasionado de la programación y siempre estoy en busca de nuevas formas de mejorar y seguir aprendiendo
+           en este fascinante mundo. Mi interés por la programación comenzó en 2015, durante mi último semestre de bachillerato, 
+           cuando tomé una materia de computación. Fue entonces cuando escribí mi primer 'Hola Mundo' en Java.
+           <br><br>
+            Me encanta rodearme de personas que también comparten esta pasión por la tecnología, aprender de ellas y, a su vez,
+            ayudarlas cuando lo necesiten. Siempre estoy dispuesto a colaborar y crecer en comunidad, porque creo que el aprendizaje
+            es más enriquecedor cuando se comparte.</p>
+
+        <h1 data-key="currentStatus">Actualmente me encuentro cursando las últimas tres materias necesarias para concluir los créditos de mi carrera.
+           Sin embargo, estoy interesado en adquirir experiencia laboral y comenzar a aplicar los conocimientos adquiridos.</h1>
+
+           <!-- Botón para descargar el CV -->
+           <div class="descargar-cv">
+            <a href="CV_Jorge_Sánchez.pdf" download="CV_Jorge_Sánchez.pdf" class="btn-descargar">
+              <i class="fas fa-download"></i> <span data-key="btnDescargar">Descarga mi CV</span>
+            </a>
+          </div>
+          
+
+         <!-- Iconos de redes sociales -->
+          <div class="social-icons">
+            <a data-enlace="https://github.com/jorssmx" onclick="return confirmarSalida(this.dataset.enlace)">
+              <i class="fab fa-github"></i>
+            </a>
+            <!--<a data-enlace="https://gitlab.com/jorssmx" onclick="return confirmarSalida(this.dataset.enlace)">
+              <i class="fab fa-gitlab"></i>
+            </a>-->
+            <a data-enlace="https://www.linkedin.com/in/jorge-s%C3%A1nchez-54b044340/" onclick="return confirmarSalida(this.dataset.enlace)">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a data-enlace="https://www.instagram.com/jorssmx" onclick="return confirmarSalida(this.dataset.enlace)">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+
+      </section>
+
+      <!-- parte habilidades -->
+      <section id="habilidades">
+        <h2 class="habilidades-titulo" data-key="habilidadesTitle">HABILIDADES</h2>
+
+        <!-- Contenedor del cubo interactivo -->
+        <div class="scene">
+          <div class="cubo-container">
+            <div class="cube">
+              <div class="face front"></div>
+              <div class="face back"></div>
+              <div class="face right"></div>
+              <div class="face left"></div>
+              <div class="face top"></div>
+              <div class="face bottom"></div>
+            </div>  
+          </div> 
+        </div>
+        
+
+        <!-- <h2 class="titulo-aprendiendo">aprendiendo</h2> -->
+        <div class="rotate-icon">
+          <i class="fas fa-sync"></i> <!-- Icono de rotación -->
+          <p data-key="habilidadesText">Gira el cubo</p>
+        </div>
+        
+
+      </section>
+
+      <!-- parte de proyectos -->
+      <section id="proyectos">
+        <h2 data-key="proyectosTitle">PROYECTOS</h2>
+        <!--<p>Aquí encontrarás una muestra de los proyectos más relevantes en los que he trabajado.</p>-->
+        <p></p>
+
+        <div class="proyectos-container">
+          <!-- Proyecto 1 -->
+          <div class="proyecto" onclick="irAProyecto(this)">
+            <img src="Images/ciencias.png" alt="Proyecto 1">
+            <p data-key="textFacultad">Todo lo que hice en la Facultad</p>
+            <span data-enlace="https://github.com/jorssmx/Facultad-de-Ciencias"></span>
+          </div>
+        
+          <!-- Proyecto 2 -->
+          <div class="proyecto" onclick="irAProyecto(this)">
+            <img src="Images/gatojuego.png" alt="Proyecto 2">
+            <p data-key="textGato">Juego del Gato</p>
+            <span data-enlace="https://jorssmx.github.io/Juego-del-gato/"></span>
+            <div class="iconos-proyectos">
+              <i class="fa-brands fa-html5" aria-hidden="true" title="HTML5"></i>
+              <i class="fa-brands fa-css3-alt" aria-hidden="true" title="CSS3"></i>
+              <i class="fa-brands fa-js" aria-hidden="true" title="JavaScript"></i>
+            </div>
+            <div class="btn-git-proyectos">
+              <a href="https://github.com/jorssmx/gatoArchivos" target="_blank" class="btn" onclick="handleGitHubClick(event)">
+                <i class="fa-brands fa-github"></i> <span data-key="btnArchivos">Archivos</span>
+              </a>
+            </div>
+          </div>
+        
+          <!-- Proyecto 3 -->
+          <div class="proyecto" onclick="irAProyecto(this)">
+            <img src="Images/memoramajuego.png" alt="Proyecto 3">
+            <p data-key="textMemorama">Juego del Memorama</p>
+            <span data-enlace="https://jorssmx.github.io/juego-del-memorama/"></span>
+            <div class="iconos-proyectos">
+              <i class="fa-brands fa-html5" aria-hidden="true" title="HTML5"></i>
+              <i class="fa-brands fa-css3-alt" aria-hidden="true" title="CSS3"></i>
+              <i class="fa-brands fa-js" aria-hidden="true" title="JavaScript"></i>
+            </div>
+            <div class="btn-git-proyectos">
+              <a href="https://github.com/jorssmx/memoramaArchivos" target="_blank" class="btn" onclick="handleGitHubClick(event)">
+                <i class="fa-brands fa-github"></i> <span data-key="btnArchivos">Archivos</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+
+      </section>
+      
+      <!-- parte de educación -->
+      <section id="educacion">
+        <h2 data-key="educacionTitle">EDUCACIÓN</h2>
+        <p data-key="cchText">2015-2018 Colegio de Ciencias y Humanidades Plantel Vallejo (CCH Vallejo), Universidad Nacional Autónoma de México (UNAM),
+           Av. 100 Metros, Av Fortuna Esq, Magdalena de las Salinas, Gustavo A. Madero, 07760 CDMX.</p>
+
+        <p data-key="FCienciasText">2018-2025 Licenciatura en Ciencias de la Computación (Facultad de Ciencias), Universidad Nacional Autónoma de México (UNAM),
+           Investigación Científica, C.U., Coyoacán, 04510 Ciudad de México, CDMX.</p>
+
+        <p data-key="actual3materiasText">Actualmente sigo estudiando la carrera de Ciencias de la computación en la Facultad de Ciencias de la UNAM,
+           estoy a 3 materias para concluir.</p>
+
+        <h1 data-key="certificadosTitle">CERTIFICADOS:</h1>
+
+        <div class="certificados-container">
+          <div class="certificado" onclick="verCertificado(this)">
+            <img src="Images/certificadoScrum.png" alt="Certificado X">
+            <p>SCRUM FUNDAMENTALS CERTIFIED</p>
+          </div>
+          <!--
+          <div class="certificado" onclick="verCertificado(this)">
+            <img src="foto.jpeg" alt="Certificado Y">
+            <p>BUSCAR EL CERTIFICADO QUE TOME DE PILARES</p>
+          </div> -->
+          <!-- Agrega más certificados aquí -->
+        </div>
+        
+        <!-- Modal para mostrar la imagen en grande -->
+        <div id="modal" class="modal" onclick="cerrarModal()">
+          <span class="cerrar">&times;</span>
+          <img class="modal-contenido" id="imagen-grande" alt="Certificado">
+        </div>
+        
+
+      </section>
+
+      <!-- parte de contacto -->
+      <section id="contacto">
+        <h2 data-key="contactoTitle">CONTÁCTAME</h2>
+      
+        <p></p>
+      
+      <!-- Para correo -->
+      <div class="contacto-container">
+        <i class="fa-regular fa-envelope"></i>
+        <span class="email-text">
+          <u>jorss_@ciencias.unam.mx</u>
+        </span>
+        <button class="btn-copiar" onclick="copiarCorreo()">
+          <i class="fa-regular fa-copy"></i> <span data-key="btnCorreo">Copiar correo</span>
+        </button>
+        <span id="confirmation-email" class="confirmation-message" style="display: none;" data-key="aparicionCopiado">✔ Copiado</span>
+      </div>
+
+      <!-- Para Instagram -->
+      <div class="contacto-container">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="instagram-text">
+          <a class="link-pequeno" data-enlace="https://www.instagram.com/jorssmx" onclick="return confirmarSalida(this.dataset.enlace)">
+            <u>https://www.instagram.com/jorssmx</u>
+          </a>
+        </span>
+        <button class="btn-copiar" onclick="copiarInstagram()">
+          <i class="fa-regular fa-copy"></i> <span data-key="btnInstagram">Copiar Instagram</span>
+        </button>
+        <span id="confirmation-instagram" class="confirmation-message" style="display: none;" data-key="aparicionCopiado">✔ Copiado</span>
+      </div>
+
+      <!-- Para WhatsApp -->
+      <div class="contacto-container">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-text">
+          <a class="link-pequeno" data-enlace="https://wa.me/525578538065" onclick="return confirmarSalida(this.dataset.enlace)">
+            <u>+52 55 78 53 80 65</u>
+          </a>
+        </span>
+        <button class="btn-copiar" onclick="copiarWhatsapp()">
+          <i class="fa-regular fa-copy"></i> <span data-key="btnWhatsApp">Copiar WhatsApp</span>
+        </button>
+        <span id="confirmation-whatsapp" class="confirmation-message" style="display: none;" data-key="aparicionCopiado">✔ Copiado</span>
+      </div>
+
+      <!-- Para Telegram -->
+      <div class="contacto-container">
+        <i class="fa-brands fa-telegram"></i>
+        <span class="telegram-text">
+          <a class="link-pequeno" data-enlace="https://t.me/jorssmx" onclick="return confirmarSalida(this.dataset.enlace)">
+            <u>https://t.me/jorssmx</u>
+          </a>
+        </span>
+        <button class="btn-copiar" onclick="copiarTelegram()">
+          <i class="fa-regular fa-copy"></i> <span data-key="btnTelegram">Copiar Telegram</span>
+        </button>
+        <span id="confirmation-telegram" class="confirmation-message" style="display: none;" data-key="aparicionCopiado">✔ Copiado</span>
+      </div>
+
+
+
+        <h1 data-key="sitioTitle">ESTE SITIO ESTÁ DESARROLLADO CON:</h1>
+        <div class="iconos-desarrollo">
+          <i class="fa-brands fa-html5" aria-hidden="true" title="HTML5"></i>
+          <i class="fa-brands fa-css3-alt" aria-hidden="true" title="CSS3"></i>
+          <i class="fa-brands fa-js" aria-hidden="true" title="JavaScript"></i>
+        </div>
+       
+      </section>
+
+      <!-- Enlace al archivo JavaScript -->
+      <script src="script.js"></script>
+      
+    </main>
+  </div>
+</body>
+</html>
