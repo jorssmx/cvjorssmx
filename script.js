@@ -238,6 +238,7 @@ const texts = {
     textFacultad: "Todo lo que hice en la Facultad",
     textGato: "Juego del Gato",
     textMemorama: "Juego del Memorama",
+    textNotas: "App de Notas",
 
     // botones
     btnDescargar: "Descarga mi CV",
@@ -286,6 +287,7 @@ const texts = {
     textFacultad: "Everything I did in the Faculty",
     textGato: "Cat Game",
     textMemorama: "Memorama game",
+    textNotas: "Notes app",
 
     // botones
     btnDescargar: "Download my CV",
