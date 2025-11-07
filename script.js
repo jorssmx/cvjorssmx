@@ -212,14 +212,14 @@ const texts = {
     sobreMi: "Sobre mí",
     habilidades: "Habilidades",
     proyectos: "Proyectos",
-    educacion: "Educación",
+    educacion: "Educación y Experiencia",
     contacto: "Contacto",
 
      // titulos
     sobreMiTitle: "¡HOLA!, SOY JORGE SÁNCHEZ",
     habilidadesTitle: "HABILIDADES",
     proyectosTitle: "PROYECTOS",
-    educacionTitle: "EDUCACIÓN",
+    educacionTitle: "EDUCACIÓN Y EXPERIENCIA",
     contactoTitle: "CONTÁCTAME",
 
     //subtitulos
@@ -227,11 +227,11 @@ const texts = {
     sitioTitle: "ESTE SITIO ESTÁ DESARROLLADO CON:",
 
     // texto
-    sobreMiText: "Soy un apasionado de la programación y siempre estoy en busca de nuevas formas de mejorar y seguir aprendiendo en este fascinante mundo. Mi interés por la programación comenzó en 2015, durante mi último semestre de bachillerato, cuando tomé una materia de computación. Fue entonces cuando escribí mi primer 'Hola Mundo' en Java. \n\n Me encanta rodearme de personas que también comparten esta pasión por la tecnología, aprender de ellas y, a su vez, ayudarlas cuando lo necesiten. Siempre estoy dispuesto a colaborar y crecer en comunidad, porque creo que el aprendizaje es más enriquecedor cuando se comparte.",
-    currentStatus: "Actualmente me encuentro cursando las últimas tres materias necesarias para concluir los créditos de mi carrera. Sin embargo, estoy interesado en adquirir experiencia laboral y comenzar a aplicar los conocimientos adquiridos.",
-    cchText: "2015-2018 Colegio de Ciencias y Humanidades Plantel Vallejo (CCH Vallejo), Universidad Nacional Autónoma de México (UNAM), Av. 100 Metros, Av Fortuna Esq, Magdalena de las Salinas, Gustavo A. Madero, 07760 CDMX.",
+    sobreMiText: "Soy un desarrollador apasionado por convertir ideas en experiencias digitales. Disfruto diseñar y construir aplicaciones móviles y web con código claro y eficiente. Siempre estoy en busca de nuevos retos para seguir evolucionando como profesional del software.",
+    sobreMiText2: "Me encanta rodearme de personas que también comparten esta pasión por la tecnología, aprender de ellas y, a su vez, ayudarlas cuando lo necesiten. Siempre estoy dispuesto a colaborar y crecer en comunidad, porque creo que el aprendizaje es más enriquecedor cuando se comparte.",
     FCienciasText: "2018-2025 Licenciatura en Ciencias de la Computación (Facultad de Ciencias), Universidad Nacional Autónoma de México (UNAM), Investigación Científica, C.U., Coyoacán, 04510 Ciudad de México, CDMX.",
-    actual3materiasText: "Actualmente sigo estudiando la carrera de Ciencias de la computación en la Facultad de Ciencias de la UNAM, estoy a 3 materias para concluir.",
+    IcatText: "Servicio Social - 2025 – Actualidad, Instituto de Ciencias Aplicadas y Tecnología (ICAT), Cto. Exterior S/N, C.U., Coyoacán, 04510 Ciudad de México, CDMX.",
+    actual1materiasText: "Estoy a una matería para poder titularme.",
     
 
     // texto proyectos
@@ -269,7 +269,7 @@ const texts = {
     sobreMiTitle: "HELLO!, I'M JORGE SÁNCHEZ",
     habilidadesTitle: "SKILLS",
     proyectosTitle: "PROJECTS",
-    educacionTitle: "EDUCATION",
+    educacionTitle: "EDUCATION AND EXPERIENCE",
     contactoTitle: "CONTACT ME",
 
     //subtitulos
@@ -277,11 +277,13 @@ const texts = {
     sitioTitle: "THIS SITE IS DEVELOPED WITH:",
 
     // texto 
-    sobreMiText: "I am passionate about programming and always looking for new ways to improve and keep learning in this fascinating world. My interest in programming began in 2015, during my last semester of high school, when I took a computer science course. It was then that I wrote my first 'Hello World' in Java. \n\n I love surrounding myself with people who also share this passion for technology, learning from them, and, in turn, helping them when they need it. I am always willing to collaborate and grow as a community because I believe that learning is more enriching when shared.",
+    sobreMiText: "I am a developer passionate about turning ideas into digital experiences. I enjoy designing and building mobile and web applications with clean, efficient code. I am always seeking new challenges to keep evolving as a software professional.",
+    sobreMiText2: "I love being surrounded by people who share this passion for technology, learning from them, and in turn, helping them when they need it. I'm always willing to collaborate and grow within a community because I believe learning is more enriching when shared.",
     currentStatus: "I am currently taking the last three courses required to complete the credits for my degree. However, I am eager to gain work experience and start applying the knowledge I have acquired.",
     cchText: "2015-2018 College of Sciences and Humanities Vallejo Campus (CCH Vallejo), National Autonomous University of Mexico (UNAM), Av. 100 Metros, Av Fortuna Esq, Magdalena de las Salinas, Gustavo A. Madero, 07760 Mexico City.",
     FCienciasText: "2018-2025 Bachelor's Degree in Computer Science (Faculty of Sciences), National Autonomous University of Mexico (UNAM), Scientific Research, University City (C.U.), Coyoacán, 04510 Mexico City, CDMX.",
-    actual3materiasText: "I am currently studying for a degree in Computer Science at the Faculty of Sciences at UNAM. I have three courses left to complete my studies.",
+    IcatText: "2025-2028 Service Social, Institute of Applied Sciences and Technology (ICAT), Cto. Exterior S/N, C.U., Coyoacán, 04510 Mexico City, CDMX.",
+    actual1materiasText: "I am one subject away from graduating.",
 
     // texto proyectos
     textFacultad: "Everything I did in the Faculty",
