@@ -66,66 +66,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // para el cubo sea funcional es decir rote dependiendo el ratón o el touch
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.cubo-container');
-  const cube = document.querySelector('.cube');
-  if (!container || !cube) {
-    console.error('No se encontró el contenedor o el cubo');
+  const containers = document.querySelectorAll('.cubo-container');
+  if (!containers.length) {
+    console.error('No se encontraron contenedores de cubos');
     return;
   }
 
-  let isDragging = false;
-  let startX, startY;
-  let rotateX = 0, rotateY = 0;
+  containers.forEach((container) => {
+    const cube = container.querySelector('.cube');
+    if (!cube) return;
 
-  // Detectar si es móvil (opcional)
-  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    let isDragging = false;
+    let startX, startY;
+    let rotateX = 0, rotateY = 0;
 
-  // Función para iniciar el arrastre
-  function startDrag(e) {
-    // Solo permitir arrastre en el contenedor en móviles
-    if (isMobile && !container.contains(e.target)) return;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-    const touch = e.touches ? e.touches[0] : e;
-    isDragging = true;
-    startX = touch.clientX;
-    startY = touch.clientY;
-    cube.style.cursor = 'grabbing'; // Cambia el cursor
-  }
+    function startDrag(e) {
+      if (isMobile && !container.contains(e.target)) return;
 
-  // Función para mover el cubo
-  function onDrag(e) {
-    if (!isDragging) return;
+      const touch = e.touches ? e.touches[0] : e;
+      isDragging = true;
+      startX = touch.clientX;
+      startY = touch.clientY;
+      cube.style.cursor = 'grabbing';
 
-    const touch = e.touches ? e.touches[0] : e;
-    const deltaX = touch.clientX - startX;
-    const deltaY = touch.clientY - startY;
+      // Escuchar el movimiento en la ventana mientras se arrastra este cubo
+      window.addEventListener('mousemove', onDrag);
+      window.addEventListener('mouseup', stopDrag);
+      window.addEventListener('touchmove', onDrag);
+      window.addEventListener('touchend', stopDrag);
+    }
 
-    rotateY += deltaX * 0.5;
-    rotateX = Math.max(-90, Math.min(90, rotateX - deltaY * 0.5)); // Limita la rotación en X
+    function onDrag(e) {
+      if (!isDragging) return;
 
-    cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      const touch = e.touches ? e.touches[0] : e;
+      const deltaX = touch.clientX - startX;
+      const deltaY = touch.clientY - startY;
 
-    startX = touch.clientX;
-    startY = touch.clientY;
-  }
+      rotateY += deltaX * 0.5;
+      rotateX = Math.max(-90, Math.min(90, rotateX - deltaY * 0.5));
 
-  // Función para detener el arrastre
-  function stopDrag() {
-    isDragging = false;
-    cube.style.cursor = 'grab'; // Vuelve al cursor inicial
-  }
+      cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-  // Eventos generales
-  document.addEventListener('mousedown', startDrag);
-  document.addEventListener('mousemove', onDrag);
-  document.addEventListener('mouseup', stopDrag);
+      startX = touch.clientX;
+      startY = touch.clientY;
+    }
 
-  document.addEventListener('touchstart', startDrag);
-  document.addEventListener('touchmove', onDrag);
-  document.addEventListener('touchend', stopDrag);
+    function stopDrag() {
+      isDragging = false;
+      cube.style.cursor = 'grab';
 
-  // Cursor inicial
-  cube.style.cursor = 'grab';
+      window.removeEventListener('mousemove', onDrag);
+      window.removeEventListener('mouseup', stopDrag);
+      window.removeEventListener('touchmove', onDrag);
+      window.removeEventListener('touchend', stopDrag);
+    }
+
+    // Eventos por contenedor para iniciar el arrastre de cada cubo de forma independiente
+    container.addEventListener('mousedown', startDrag);
+    container.addEventListener('touchstart', startDrag, { passive: true });
+
+    // Cursor inicial
+    cube.style.cursor = 'grab';
+  });
 });
 
 // para los certificados de educación para que se puedan abrir y cerrar las fotos 

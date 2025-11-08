@@ -326,6 +326,31 @@ body {
   color: #333;
 }
 
+/* Layout para dos cubos lado a lado */
+.habilidades-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.cubo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cubo-subtitle {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.divider {
+  width: 1px;
+  background-color: #ccc;
+  min-height: 360px; /* altura aproximada de las secciones */
+}
+
 /* para que el cubo no choqué con titulo de aprendiendo n*/
 .titulo-aprendiendo {
   margin-top: 100px; /* Espaciado entre el cubo y el título */
@@ -368,12 +393,20 @@ body {
 .back { transform: rotateY(180deg) translateZ(100px); background-image: url('Images/Github.png'); }
 .right { transform: rotateY(90deg) translateZ(100px); background-image: url('Images/css.png'); }
 .left { transform: rotateY(-90deg) translateZ(100px); background-image: url('Images/js.png'); }
-.top { transform: rotateX(90deg) translateZ(100px); background-image: url('Images/java.png'); }
+.top { transform: rotateX(90deg) translateZ(100px); background-image: url('Images/git.png'); }
 .bottom { transform: rotateX(-90deg) translateZ(100px); background-image: url('Images/python.png'); }
+
+/* Imágenes específicas para el Cubo 2 */
+.cubo-container[data-cubo-id="2"] .front { background-image: url('Images/AndroidStudio.png'); }
+.cubo-container[data-cubo-id="2"] .back { background-image: url('Images/Swift.png'); }
+.cubo-container[data-cubo-id="2"] .right { background-image: url('Images/xCode.png'); }
+.cubo-container[data-cubo-id="2"] .left { background-image: url('Images/Kotlin.png'); }
+.cubo-container[data-cubo-id="2"] .top { background-image: url('Images/java.png'); }
+.cubo-container[data-cubo-id="2"] .bottom { background-image: url('Images/Flutter.png'); }
 
 /* estilo para lo del gira el cubo */
 .rotate-icon {
-  margin-top: 125px; /* Espaciado entre el cubo y el título */
+  margin-top: 90px; /* Empuja el texto más abajo para evitar que el cubo lo tape */
   text-align: center;
   font-size: 2rem; /* tamaño del icono */
   cursor: pointer;
@@ -689,6 +722,31 @@ body {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+
+  .habilidades-grid {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  /* En móviles, menos distancia para no generar scroll excesivo */
+  .rotate-icon {
+    margin-top: 80px;
+  }
+
+  .cubo-section {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .cubo-subtitle {
+    text-align: center;
   }
 
   .sidebar {

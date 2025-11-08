@@ -86,28 +86,53 @@
       <section id="habilidades">
         <h2 class="habilidades-titulo" data-key="habilidadesTitle">HABILIDADES</h2>
 
-        <!-- Contenedor del cubo interactivo -->
-        <div class="scene">
-          <div class="cubo-container">
-            <div class="cube">
-              <div class="face front"></div>
-              <div class="face back"></div>
-              <div class="face right"></div>
-              <div class="face left"></div>
-              <div class="face top"></div>
-              <div class="face bottom"></div>
-            </div>  
-          </div> 
-        </div>
-        
+        <!-- Contenedor de dos cubos lado a lado -->
+        <div class="habilidades-grid">
+          <!-- Cubo 1 -->
+          <div class="cubo-section">
+            <h3 class="cubo-subtitle" data-key="cubo1Title">Cubo 1</h3>
+            <div class="scene">
+              <div class="cubo-container" data-cubo-id="1">
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+            </div>
+            <div class="rotate-icon">
+              <i class="fas fa-sync"></i>
+              <p data-key="habilidadesText">Gira el cubo</p>
+            </div>
+          </div>
 
-        <!-- <h2 class="titulo-aprendiendo">aprendiendo</h2> -->
-        <div class="rotate-icon">
-          <i class="fas fa-sync"></i> <!-- Icono de rotación -->
-          <p data-key="habilidadesText">Gira el cubo</p>
-        </div>
-        
+          <!-- Divisor vertical -->
+          <div class="divider" aria-hidden="true"></div>
 
+          <!-- Cubo 2 -->
+          <div class="cubo-section">
+            <h3 class="cubo-subtitle" data-key="cubo2Title">Cubo 2</h3>
+            <div class="scene">
+              <div class="cubo-container" data-cubo-id="2">
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+            </div>
+            <div class="rotate-icon">
+              <i class="fas fa-sync"></i>
+              <p data-key="habilidadesText">Gira el cubo</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- parte de proyectos -->
