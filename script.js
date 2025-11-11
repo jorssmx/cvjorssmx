@@ -32,14 +32,16 @@ function copiarTelegram() {
   copiarAlPortapapeles("https://t.me/jorssmx", "confirmation-telegram");
 }
 
-// Función para que al dar click en un link le pregunte al usuario si quiere ir a ese sitio web
-function confirmarSalida(url) {
-  const confirmacion = window.confirm("¿Estás seguro de que deseas salir de esta página y visitar el enlace?");
-  if (confirmacion) {
-    window.location.href = url; // Redirige si el usuario confirma
+// Función para confirmar la navegación; respeta clic medio y Ctrl/Cmd+clic
+function confirmarSalida(url, mensaje = "¿Estás seguro de que deseas visitar el enlace?", event) {
+  const e = event || window.event;
+  // Si es clic medio o está presionando Ctrl/Cmd, permitir el comportamiento por defecto (abrir nueva pestaña)
+  if (e && (e.button === 1 || e.ctrlKey || e.metaKey)) {
     return true;
   }
-  return false; // Detiene la redirección si cancela
+  // Para clic izquierdo normal, preguntar confirmación; true permite la navegación, false la cancela
+  const confirmacion = window.confirm(mensaje);
+  return confirmacion;
 }
 
 
@@ -179,7 +181,9 @@ function irAProyecto(element) {
   const enlace = element.querySelector('span').getAttribute('data-enlace');
   if (enlace) {
     // Pregunta al usuario si quiere visitar la página
-    confirmarSalida(enlace);
+    if (confirmarSalida(enlace)) {
+      window.location.href = enlace;
+    }
   } else {
     console.error("No se encontró un enlace para este proyecto.");
   }
@@ -202,13 +206,7 @@ function handleGitHubClick(event) {
 }
 
 
-// Función para confirmar antes de redirigir (reutilizamos la existente)
-function confirmarSalida(url, mensaje = "¿Estás seguro de que deseas visitar el enlace?") {
-  const confirmacion = window.confirm(mensaje);
-  if (confirmacion) {
-    window.location.href = url;
-  }
-}
+// (confirmarSalida unificada arriba)
 
 // para el cambio de idioma en este caso de español a inglés y viceversa
 const texts = {
