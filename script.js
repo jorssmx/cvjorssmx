@@ -14,7 +14,7 @@ function copiarAlPortapapeles(texto, confirmationId) {
 
 // Función de copiar para el correo
 function copiarCorreo() {
-  copiarAlPortapapeles("jorss_@ciencias.unam.mx", "confirmation-email");
+  copiarAlPortapapeles("jorssmx.24@gmail.com", "confirmation-email");
 }
 
 // Función de copiar para WhatsApp
