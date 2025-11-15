@@ -476,8 +476,20 @@ body {
   transition: transform 0.3s, color 0.3s;
 }
 
+.iconos-proyectos img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.3s;
+  border-radius: 4px;
+}
+
 .iconos-proyectos i:hover {
   transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.iconos-proyectos img:hover {
+  transform: scale(1.2);
 }
 
 /* Colores específicos para cada ícono al pasar el mouse */
@@ -495,6 +507,10 @@ body {
 
 .iconos-proyectos .fa-java:hover {
   color: red;
+}
+
+.iconos-proyectos .fa-android:hover {
+  color: green;
 }
 
 .iconos-proyectos .fa-python:hover {
