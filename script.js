@@ -176,34 +176,48 @@ function escListener(event) {
 
 // para la parte de los proyectos que al dar click en la imagen te mande a la página de cierto proyecto
 // Función para redirigir al enlace del proyecto
-function irAProyecto(element) {
-  // Obtén el enlace del atributo 'data-enlace'
-  const enlace = element.querySelector('span').getAttribute('data-enlace');
-  if (enlace) {
-    // Pregunta al usuario si quiere visitar la página
-    if (confirmarSalida(enlace)) {
-      window.location.href = enlace;
-    }
-  } else {
+function irAProyecto(element, event) {
+  const span = element.querySelector('span');
+  const enlace = span ? span.getAttribute('data-enlace') : null;
+  if (!enlace) {
     console.error("No se encontró un enlace para este proyecto.");
+    return;
+  }
+
+  const e = event || window.event;
+  if (e && (e.button === 1 || e.ctrlKey || e.metaKey)) {
+    window.open(enlace, '_blank');
+    return;
+  }
+
+  if (confirmarSalida(enlace, undefined, e)) {
+    window.location.href = enlace;
   }
 }
 
 // Funcion para que no se propague el click del boton dentro del contenedor
 function handleGitHubClick(event) {
-  // Prevenir que el clic en el botón GitHub active el evento en el contenedor
-  event.stopPropagation(); // Detener la propagación del clic al contenedor
-  
-  // Preguntar al usuario si desea visitar el enlace
+  event.stopPropagation();
+  if (event.button === 1 || event.ctrlKey || event.metaKey) {
+    return true;
+  }
   const confirmacion = confirm("¿Deseas visitar este enlace de GitHub?");
-  if (confirmacion) {
-    // Redirigir al enlace de GitHub si el usuario acepta
-    window.location.href = event.target.href;
-  } else {
-    // Cancelar la acción si el usuario no acepta
+  if (!confirmacion) {
     event.preventDefault();
   }
 }
+
+// Abrir proyectos en nueva pestaña con clic medio en cualquier zona del proyecto
+document.addEventListener('auxclick', function(e) {
+  if (e.button !== 1) return;
+  const card = e.target.closest('.proyecto');
+  if (!card) return;
+  const span = card.querySelector('span');
+  const enlace = span ? span.getAttribute('data-enlace') : null;
+  if (enlace) {
+    window.open(enlace, '_blank');
+  }
+});
 
 
 // (confirmarSalida unificada arriba)
