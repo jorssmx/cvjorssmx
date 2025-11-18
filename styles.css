@@ -243,6 +243,7 @@ section p {
 .social-icons a:hover .fa-whatsapp { color: #25D366; }
 .social-icons a:hover .fa-github { color: #ffffff; }
 .social-icons a:hover .fa-envelope { color: #EA4335; }
+.social-icons a:hover .fa-telegram { color: #00A0DC; }
 
 /* para los botones de oscuro y claro */
 /* Botones de alternancia */
