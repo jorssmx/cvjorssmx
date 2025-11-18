@@ -239,9 +239,10 @@ section p {
   margin-right: 25px; /* para que esten separados hacía su derecha */
 }
 
-.social-icons a:hover {
-  color: #0073b1; /* Ejemplo: cambia el color al pasar el cursor */
-}
+/* Colores específicos al pasar el ratón sobre cada icono */
+.social-icons a:hover .fa-whatsapp { color: #25D366; }
+.social-icons a:hover .fa-github { color: #ffffff; }
+.social-icons a:hover .fa-envelope { color: #EA4335; }
 
 /* para los botones de oscuro y claro */
 /* Botones de alternancia */
