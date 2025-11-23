@@ -328,6 +328,11 @@ body {
   color: #333;
 }
 
+/* Color cuando activas el modo oscuro */
+.dark-mode #habilidades {
+  background-color: #1a1a1a;
+}
+
 /* Layout para dos cubos lado a lado */
 .habilidades-grid {
   display: flex;
