@@ -253,7 +253,7 @@ const texts = {
 
     // texto proyectos
     textFacultad: "Todo lo que hice en la Facultad",
-    textGato: "Juego del Gato",
+    textSENSEI: "SENSEI",
     textMemorama: "Juego del Memorama",
     textNotas: "App de Notas",
 
@@ -304,7 +304,7 @@ const texts = {
 
     // texto proyectos
     textFacultad: "Everything I did in the Faculty",
-    textGato: "Cat Game",
+    textSENSEI: "SENSEI",
     textMemorama: "Memorama game",
     textNotas: "Notes app",
 
