@@ -294,7 +294,7 @@ const texts = {
     sitioTitle: "THIS SITE IS DEVELOPED WITH:",
 
     // texto 
-    sobreMiText: "I am a developer passionate about turning ideas into digital experiences. I enjoy designing and building mobile and web applications with clean, efficient code. I am always seeking new challenges to keep evolving as a software professional.",
+    sobreMiText: "I'm a developer passionate about turning ideas into digital experiences. I enjoy designing and building mobile and web applications with clean and efficient code, as well as analyzing and managing data for decision-making. I'm always looking for new challenges to continue evolving as a software professional.",
     sobreMiText2: "I love being surrounded by people who share this passion for technology, learning from them, and in turn, helping them when they need it. I'm always willing to collaborate and grow within a community because I believe learning is more enriching when shared.",
     currentStatus: "I am currently taking the last three courses required to complete the credits for my degree. However, I am eager to gain work experience and start applying the knowledge I have acquired.",
     cchText: "2015-2018 College of Sciences and Humanities Vallejo Campus (CCH Vallejo), National Autonomous University of Mexico (UNAM), Av. 100 Metros, Av Fortuna Esq, Magdalena de las Salinas, Gustavo A. Madero, 07760 Mexico City.",
